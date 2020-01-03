@@ -7,3 +7,6 @@
 #   a level of difficulty from easy to hard
 # - make a win/lose message
 # - possibly add a timed gamemode
+
+
+#ethan made this comment
