@@ -7,7 +7,4 @@
 #   a level of difficulty from easy to hard
 # - make a win/lose message
 # - possibly add a timed gamemode
-<<<<<<< HEAD
-=======
 # - more to come from plan
->>>>>>> 5f2eb714abd2bc4d2422e5d78d34a2008cff6d2f
