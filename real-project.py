@@ -9,4 +9,13 @@
 # - possibly add a timed gamemode
 # - more to come from plan
 
-# testing
+import sys
+import pygame
+pygame.init()
+screen = pygame.display.set_mode((700, 500))
+screen.fill((255,255,255))
+pygame.display.flip()
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()

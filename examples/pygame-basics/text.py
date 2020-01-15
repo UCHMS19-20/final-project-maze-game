@@ -14,7 +14,7 @@ text = font.render("Hello", True, (200,0,255))
 screen = pygame.display.set_mode( (200, 150) )
 
 # fill the screen with white
-screen.fill( (255,255,255) )
+screen.fill((255,255,255))
 # draw text to screen
 screen.blit(text, (20, 20) )
 # update the display
