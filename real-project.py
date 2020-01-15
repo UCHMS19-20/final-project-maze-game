@@ -13,9 +13,9 @@ import sys
 import pygame
 pygame.init()
 screen = pygame.display.set_mode((700, 500))
+clock = pygame.time.Clock()
 screen.fill((255,255,255))
 pygame.display.flip()
-pygame.display.get_surface()
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

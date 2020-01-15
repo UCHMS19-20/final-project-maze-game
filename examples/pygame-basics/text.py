@@ -7,7 +7,7 @@ pygame.init()
 # Create a font object
 font = pygame.font.SysFont("Arial", 50)
 # Create text using the font
-text = font.render("Hello", True, (200,0,255))
+text = font.render("dslkfjlgkjoijsdf", True, (200,0,255))
 
 
 # Create a display. Size must be a tuple, which is why it's in parentheses
