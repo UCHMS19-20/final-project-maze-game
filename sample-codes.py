@@ -319,8 +319,8 @@ black = pygame.Color(0,0,0)
 red = pygame.Color(255,0,0)
 
 #creates variables for player position
-player_x = 262.5
-player_y = 275
+player_x = 260
+player_y = 150
 
 # Main loop, game goes inside this loop
 while True:
@@ -338,17 +338,21 @@ while True:
                 player_x -= 10
                 # screen.blit(player, (player_x, player_y))
             #is the key being pressed yhe right arrow
-            elif event.key == pygame.K_UP:
+            elif event.key == pygame.K_RIGHT:
                 #if so move the x position to the right
                 player_x += 10
                 # screen.blit(player, (player_x, player_y))
+            elif event.key == pygame.K_UP:
+                player_y -= 10
+            elif event.key == pygame.K_DOWN:
+                player_y += 10
 
         #makes the display screen white
         screen.fill(white)
         pygame.display.flip()
 
         #draws the rectangle which the player can move
-        pygame.draw.rect(screen, red, (player_x, player_y, 75, 75))
+        pygame.draw.rect(screen, red, (player_x, player_y, 25, 25))
         
         #redraws the entire screen
         pygame.display.update()
