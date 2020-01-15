@@ -5,7 +5,7 @@ import pygame
 pygame.init()
 
 # Create a display. Size must be a tuple, which is why it's in parentheses
-screen = pygame.display.set_mode( (400, 300) )
+screen = pygame.display.set_mode( (700, 500) )
 
 # Main loop. Your game would go inside this loop
 while True:
