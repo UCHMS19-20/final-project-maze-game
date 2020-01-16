@@ -363,16 +363,13 @@ pygame.init()
 screen = pygame.display.set_mode((400, 300))
 done = False
 is_blue = True
-x = 30
-y = 30
-n = 1
+x = 3
+y = 3
 pygame.key.set_repeat()
 while not done:
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                         done = True
-                if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-                        is_blue = not is_blue
         pressed = pygame.key.get_pressed()
         if pressed[pygame.K_UP]: y -= 1
         if pressed[pygame.K_DOWN]: y += 1
@@ -381,8 +378,7 @@ while not done:
 
         screen.fill((0, 0, 0))
         
-        if is_blue: color = (0, 128, 255)
-        else: color = (255, 100, 0)
-        pygame.draw.rect(screen, color, pygame.Rect(x, y, 60, 60))
+        color = (255, 100, 0)
+        pygame.draw.rect(screen, color, pygame.Rect(x, y, 30, 30))
         
         pygame.display.flip()
