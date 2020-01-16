@@ -62,9 +62,8 @@ green = pygame.Color(0,128,0)
 navy = pygame.Color(0,0,128)
 
 #creates variables for player position
-player_x = 260
-player_y = 150
-player = Player(50, 50)
+x = 3
+y = 3
 # Main loop. Your game would go inside this loop
 while True:
     # do something for each event in the event queue (list of things that happen)
@@ -73,32 +72,18 @@ while True:
         if event.type == pygame.QUIT:
             # If so, exit the program
             sys.exit()
-        #checks to see if current event is a key being pressed
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                player.changespeed(-5, 0)
-            if event.key == pygame.K_RIGHT:
-                player.changespeed(5, 0)
-            if event.key == pygame.K_UP:
-                player.changespeed(0, -5)
-            if event.key == pygame.K_DOWN:
-                player.changespeed(0, 5)
- 
-        if event.type == pygame.KEYUP:
-            if event.key == pygame.K_LEFT:
-                player.changespeed(5, 0)
-            if event.key == pygame.K_RIGHT:
-                player.changespeed(-5, 0)
-            if event.key == pygame.K_UP:
-                player.changespeed(0, 5)
-            if event.key == pygame.K_DOWN:
-                player.changespeed(0, -5)
+    pressed = pygame.key.get_pressed()
+    if pressed[pygame.K_UP]: y -= 1
+    if pressed[pygame.K_DOWN]: y += 1
+    if pressed[pygame.K_LEFT]: x -= 1
+    if pressed[pygame.K_RIGHT]: x += 1
+
         #makes the display screen white
-        screen.fill(white)
-        pygame.display.flip()
+    screen.fill(white)
+    pygame.display.flip()
 
         #draws the rectangle which the player can move
-        pygame.draw.rect(screen, red, (player_x, player_y, 25, 25))
+    pygame.draw.rect(screen, red, pygame.Rect(x, y, 30, 30))
         
         #redraws the entire screen
-        pygame.display.update()
+    pygame.display.update()
