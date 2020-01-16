@@ -80,10 +80,10 @@ while True:
 
         #makes the display screen white
     screen.fill(black)
-    pygame.display.flip()
 
         #draws the rectangle which the player can move
     pygame.draw.rect(screen, navy, pygame.Rect(x, y, 15, 15))
-        
+    # if x < 0 or x > 700 or y<0 or y>500:
+    #     sys.exit()
         #redraws the entire screen
     pygame.display.update()
