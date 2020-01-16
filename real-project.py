@@ -51,7 +51,7 @@ pygame.init()
 # Create a display. Size must be a tuple, which is why it's in parentheses
 screen = pygame.display.set_mode( (700, 500) )
 
-#set-up the colors based on RGB table
+# colors
 black = pygame.Color(0,0,0)
 white = pygame.Color(255,255,255)
 red = pygame.Color(255,0,0)
@@ -61,9 +61,9 @@ yellow = pygame.Color(255,255,0)
 green = pygame.Color(0,128,0)
 navy = pygame.Color(0,0,128)
 
-#creates variables for player position
-x = 3
-y = 3
+# original player position
+x = 15
+y = 15
 # Main loop. Your game would go inside this loop
 while True:
     # do something for each event in the event queue (list of things that happen)
@@ -73,17 +73,17 @@ while True:
             # If so, exit the program
             sys.exit()
     pressed = pygame.key.get_pressed()
-    if pressed[pygame.K_UP]: y -= 1
-    if pressed[pygame.K_DOWN]: y += 1
-    if pressed[pygame.K_LEFT]: x -= 1
-    if pressed[pygame.K_RIGHT]: x += 1
+    if pressed[pygame.K_UP]: y -= .2
+    if pressed[pygame.K_DOWN]: y += .2
+    if pressed[pygame.K_LEFT]: x -= .2
+    if pressed[pygame.K_RIGHT]: x += .2
 
         #makes the display screen white
-    screen.fill(white)
+    screen.fill(black)
     pygame.display.flip()
 
         #draws the rectangle which the player can move
-    pygame.draw.rect(screen, red, pygame.Rect(x, y, 30, 30))
+    pygame.draw.rect(screen, navy, pygame.Rect(x, y, 15, 15))
         
         #redraws the entire screen
     pygame.display.update()
