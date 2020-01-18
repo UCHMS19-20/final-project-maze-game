@@ -20,7 +20,7 @@ import pygame
 pygame.init()
 
 # Create a display. Size must be a tuple, which is why it's in parentheses
-screen = pygame.display.set_mode( (700, 500) )
+screen = pygame.display.set_mode( (1200, 700) )
 
 # colors
 black = pygame.Color(0,0,0)
@@ -44,19 +44,18 @@ while True:
             # If so, exit the program
             sys.exit()
     pressed = pygame.key.get_pressed()
-    if pressed[pygame.K_UP]: y -= .08
-    if pressed[pygame.K_DOWN]: y += .08
-    if pressed[pygame.K_LEFT]: x -= .08
-    if pressed[pygame.K_RIGHT]: x += .08
-
+    if pressed[pygame.K_UP] and y > 0:
+        y -= 5
+    if pressed[pygame.K_DOWN] and y < 685:
+        y += 5
+    if pressed[pygame.K_LEFT] and x > 0:
+        x -= 5
+    if pressed[pygame.K_RIGHT] and x < 1185:
+        x += 5
         #makes the display screen white
     screen.fill(navy)
 
         #draws the rectangle which the player can move
-    pygame.draw.rect(screen, white, pygame.Rect(x, y, 15, 15))
-    # if x < 0 or x > 700 or y<0 or y>500:
-    #     sys.exit()
-        #redraws the entire screen
-    pygame.draw.rect(screen, green, (0,0,10,500))
-    pygame.draw.rect(screen, green, (0,0,700,10))
+    pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+    pygame.draw.rect(screen, green, (600, 350, 80, 80))
     pygame.display.update()
