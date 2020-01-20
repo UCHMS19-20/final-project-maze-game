@@ -1,21 +1,4 @@
-# plan:
-# - make a maze where the user's mouse is tracked
-# - use pixels to draw the maze with multiple traps, but not too
-#   difficult resulting in the user failing from trying to take normal path
-# - make the user lose and restart if a wall (filled pixel) is touched
-# - make multiple levels of the maze, and allow each to have
-#   a level of difficulty from easy to hard
-# - make a win/lose message
-# - possibly add a timed gamemode
-# - more to come from plan
-
-# background and outline with paint
-
-
-# make initial pygame window with instructions and clickable button
-# make the difficulty levels affect speed of sprite and replace with variables
-# turn rectangles into branch
-# make each instructional window a branch and interactive
+# ADD EXPLANATORY COMMENTS TO EACH LINE (EDIT THEM TO BE MORE ACCURATE)
 
 # --------------------------------------------------------------------------------------------
 
