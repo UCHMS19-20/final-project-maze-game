@@ -52,37 +52,51 @@ while True:
             sys.exit()
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_UP] and y > 0:
-        y -= .5
+        y -= .1
     if pressed[pygame.K_DOWN] and y < 685:
-        y += .5
+        y += .1
     if pressed[pygame.K_LEFT] and x > 0:
-        x -= .5
+        x -= .1
     if pressed[pygame.K_RIGHT] and x < 1185:
-        x += .5
+        x += .1
         #makes the display screen white
     screen.fill(navy)
     # for block in groundBlocks:
     #     if(pygame.sprite.collide_rect(player, block)):
     #         sys.exit()
         #draws the rectangle which the player can move
-    pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
     pygame.draw.rect(screen, green, (0, 10, 10, 690))
     pygame.draw.rect(screen, green, (0, 690, 1165, 10))
     pygame.draw.rect(screen, green, (1190, 0, 10, 700))
     pygame.draw.rect(screen, green, (0, 0, 1200, 10))
     pygame.draw.rect(screen, green, (35, 35, 10, 665))
-    pygame.draw.rect(screen, green, (70, 35, 100, 10))
+    pygame.draw.rect(screen, white, (70, 35, 1095, 10))
+    pygame.draw.rect(screen, white, (1155, 35, 10, 600))
     pygame.draw.rect(screen, green, (70, 70, 100, 10))
+    pygame.draw.rect(screen, green, (170, 70, 10, 125))
     pygame.draw.rect(screen, green, (70, 185, 100, 10))
+    pygame.draw.rect(screen, green, (170, 220, 10, 145))
+    pygame.draw.rect(screen, green, (205, 35, 10, 295))
+    pygame.draw.rect(screen, green, (170, 35, 35, 10))
+    pygame.draw.rect(screen, blue, (205, 320, 65, 10))
+    pygame.draw.rect(screen, blue, (170, 355, 100, 10))
     pygame.draw.rect(screen, green, (70, 220, 100, 10))
     pygame.draw.rect(screen, green, (70, 355, 100, 10))
     pygame.draw.rect(screen, green, (70, 390, 100, 10))
     pygame.draw.rect(screen, green, (70, 555, 100, 10))
-    pygame.draw.rect(screen, green, (70, 590, 100, 10))
+    pygame.draw.rect(screen, green, (70, 590, 135, 10))
+    pygame.draw.rect(screen, green, (195, 530, 10, 70))
+    pygame.draw.rect(screen, green, (105, 520, 100, 10))
+    pygame.draw.rect(screen, green, (105, 425, 10, 95))
+    pygame.draw.rect(screen, green, (105, 425, 100, 10))
+    pygame.draw.rect(screen, green, (195, 365, 10, 70))
+    pygame.draw.rect(screen, green, (170, 355, 35, 10))
     pygame.draw.rect(screen, green, (70, 70, 10, 115))
     pygame.draw.rect(screen, green, (70, 220, 10, 135))
     pygame.draw.rect(screen, green, (70, 390, 10, 165))
     pygame.draw.rect(screen, green, (70, 590, 10, 75))
-    pygame.draw.rect(screen, green, (70, 655, 400, 10))
+    pygame.draw.rect(screen, black, (70, 655, 400, 10))
+    pygame.draw.rect(screen, black, (505, 655, 450, 10))
     pygame.draw.rect(screen, green, (470, 655, 10, 35))
+    pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 25, 25))
     pygame.display.update()
