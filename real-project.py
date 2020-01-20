@@ -26,6 +26,8 @@ import time
 # Initialize pygame so it runs in the background and manages things
 pygame.init()
 
+pygame.display.set_caption('Maze Game')
+
 # Create a font object
 font = pygame.font.SysFont("Arial", 50)
 # Create text using the font
