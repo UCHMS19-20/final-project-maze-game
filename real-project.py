@@ -155,3 +155,5 @@ while True:
     pygame.draw.rect(screen, green, (500, 425, 10, 215))
     pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
     pygame.display.update()
+
+    # testing
