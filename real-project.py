@@ -1,33 +1,24 @@
-# ADD EXPLANATORY COMMENTS TO EACH LINE (EDIT THEM TO BE MORE ACCURATE)
-
-# --------------------------------------------------------------------------------------------
-
+# import the necessary modules for the code
 import sys
 import pygame
 import time
-
-# Initialize pygame so it runs in the background and manages things
+# initialize pygame so it runs in the background and manages things
 pygame.init()
-
+# create a title for the pygame windows that open
 pygame.display.set_caption('Maze Game')
-
-# Create a font object
+# create new font size
 font = pygame.font.SysFont("Arial", 50)
-# Create text using the font
+# create text using the font
 text1 = font.render("Instructions:", True, (0,0,0))
-
-
-# Create a display. Size must be a tuple, which is why it's in parentheses
+# create a display
 screen = pygame.display.set_mode( (800, 200) )
-
 # fill the screen with white
 screen.fill((255,255,255))
 # draw text to screen
 screen.blit(text1, (20, 20) )
 # update the display
 pygame.display.flip()
-
-# Main loop. Your game would go inside this loop
+# loop to progress through instructions
 while True:
     # do something for each event in the event queue (list of things that happen)
     for event in pygame.event.get():
@@ -35,23 +26,21 @@ while True:
         if event.type == pygame.QUIT:
             # If so, exit the program
             sys.exit()
+    # 2 second delay
     time.sleep(2)
+    # create new font size
     font = pygame.font.SysFont("Arial", 30)
-    # Create text using the font
+    # create text using the font
     text1 = font.render("Move the yellow box with the arrow keys.", True, (0,0,0))
-
-
-    # Create a display. Size must be a tuple, which is why it's in parentheses
+    # create a display
     screen = pygame.display.set_mode( (800, 200) )
-
     # fill the screen with white
     screen.fill((255,255,255))
     # draw text to screen
     screen.blit(text1, (20, 20) )
     # update the display
     pygame.display.flip()
-
-    # Main loop. Your game would go inside this loop
+    # loop to continue instructions
     while True:
         # do something for each event in the event queue (list of things that happen)
         for event in pygame.event.get():
@@ -59,24 +48,21 @@ while True:
             if event.type == pygame.QUIT:
                 # If so, exit the program
                 sys.exit()
-        # Create a font object
+        # 4 second delay
         time.sleep(4)
+        # create new font size
         font = pygame.font.SysFont("Arial", 30)
-        # Create text using the font
+        # create text using the font
         text1 = font.render("Don't hit the walls.", True, (0,0,0))
-
-
-        # Create a display. Size must be a tuple, which is why it's in parentheses
+        # create a display
         screen = pygame.display.set_mode( (800, 200) )
-
         # fill the screen with white
         screen.fill((255,255,255))
         # draw text to screen
         screen.blit(text1, (20, 20) )
         # update the display
         pygame.display.flip()
-
-        # Main loop. Your game would go inside this loop
+        # loop to continue with instructions
         while True:
             # do something for each event in the event queue (list of things that happen)
             for event in pygame.event.get():
@@ -84,24 +70,21 @@ while True:
                 if event.type == pygame.QUIT:
                     # If so, exit the program
                     sys.exit()
-            # Create a font object
+            # 4 second delay
             time.sleep(4)
+            # create a new font size
             font = pygame.font.SysFont("Arial", 30)
-            # Create text using the font
+            # create text using the font
             text1 = font.render("Get the yellow box to the bottom right corner.", True, (0,0,0))
-
-
-            # Create a display. Size must be a tuple, which is why it's in parentheses
+            # create a display
             screen = pygame.display.set_mode( (800, 200) )
-
             # fill the screen with white
             screen.fill((255,255,255))
             # draw text to screen
             screen.blit(text1, (20, 20) )
             # update the display
             pygame.display.flip()
-
-            # Main loop. Your game would go inside this loop
+            # loop to choose gamemode difficulty
             while True:
                 # do something for each event in the event queue (list of things that happen)
                 for event in pygame.event.get():
@@ -109,24 +92,21 @@ while True:
                     if event.type == pygame.QUIT:
                         # If so, exit the program
                         sys.exit()
-                # Create a font object
+                # 4 second delay
                 time.sleep(4)
+                # create new font size
                 font = pygame.font.SysFont("Arial", 30)
-                # Create text using the font
+                # create text using the font
                 text1 = font.render("Press 1 for easy, 2 for medium, or 3 for hard.", True, (0,0,0))
-
-
-                # Create a display. Size must be a tuple, which is why it's in parentheses
+                # create a display
                 screen = pygame.display.set_mode( (800, 200) )
-
                 # fill the screen with white
                 screen.fill((255,255,255))
                 # draw text to screen
                 screen.blit(text1, (20, 20) )
                 # update the display
                 pygame.display.flip()
-
-                # Main loop. Your game would go inside this loop
+                # gamemode loop containing if statement with everything
                 while True:
                     # do something for each event in the event queue (list of things that happen)
                     for event in pygame.event.get():
@@ -134,12 +114,12 @@ while True:
                         if event.type == pygame.QUIT:
                             # If so, exit the program
                             sys.exit()
+                    # if statement to determine which key was pressed determining speed of yellow block
                     pressed = pygame.key.get_pressed()
                     if pressed[pygame.K_1]:
-                        # Create a display. Size must be a tuple, which is why it's in parentheses
+                        # create a display
                         screen = pygame.display.set_mode( (1200, 700) )
-
-                        # colors
+                        # creates a list of colors that can be used later easily if necessary
                         black = pygame.Color(0,0,0)
                         white = pygame.Color(255,255,255)
                         red = pygame.Color(255,0,0)
@@ -148,13 +128,10 @@ while True:
                         yellow = pygame.Color(255,255,0)
                         green = pygame.Color(0,128,0)
                         navy = pygame.Color(0,0,128)
-
-                        # groundBlocks = [pygame.draw.rect(screen, green, (0, 10, 10, 690))]
-
-                        # original player position
+                        # yellow block starting position
                         x = 15
                         y = 674
-                        # Main loop. Your game would go inside this loop
+                        # game loop
                         while True:
                             # do something for each event in the event queue (list of things that happen)
                             for event in pygame.event.get():
@@ -162,7 +139,9 @@ while True:
                                 if event.type == pygame.QUIT:
                                     # If so, exit the program
                                     sys.exit()
+                            # creates a variable for the sprite as a yellow rectangle
                             sprite = pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+                            # creates speed for which the yellow block will move with each arrow key press
                             pressed = pygame.key.get_pressed()
                             if pressed[pygame.K_UP] and y > 0:
                                 y -= .1
@@ -172,12 +151,9 @@ while True:
                                 x -= .1
                             if pressed[pygame.K_RIGHT] and x < 1185:
                                 x += .1
-                                #makes the display screen white
+                            # makes the maze background navy
                             screen.fill(navy)
-                            # for block in groundBlocks:
-                            #     if(pygame.sprite.collide_rect(player, block)):
-                            #         sys.exit()
-                                #draws the rectangle which the player can move
+                            # creates a list of rectangles that can be used to make collision borders
                             rectangle_list = [
                                 pygame.Rect(0, 10, 10, 690),
                                 pygame.Rect(0, 690, 1165, 10),
@@ -266,6 +242,7 @@ while True:
                                 pygame.Rect(540, 425, 10, 215),
                                 pygame.Rect(520, 425, 10, 215),
                                 pygame.Rect(500, 425, 10, 215)]
+                            # draws all of the necessary rectangles on the maze
                             pygame.draw.rect(screen, green, (0, 10, 10, 690))
                             pygame.draw.rect(screen, green, (0, 690, 1165, 10))
                             pygame.draw.rect(screen, green, (1190, 0, 10, 700))
@@ -354,47 +331,49 @@ while True:
                             pygame.draw.rect(screen, green, (520, 425, 10, 215))
                             pygame.draw.rect(screen, green, (500, 425, 10, 215))
                             pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+                            # for statement to detect collisions
                             for rect in rectangle_list:
                                 pygame.draw.rect(screen, green, rect, -1)
                                 if sprite.colliderect(rect):
-                                    # Create a font object
+                                    # create new font size
                                     font = pygame.font.SysFont("Arial", 50)
-                                    # Create text using the font
+                                    # create text using the font - LOSE MESSAGE
                                     text1 = font.render("Your skills ran into a problem. :(", True, (255,255,255))
-
-
-                                    # Create a display. Size must be a tuple, which is why it's in parentheses
+                                    # create a display
                                     screen = pygame.display.set_mode( (800, 200) )
-
-                                    # fill the screen with white
+                                    # fill the screen with blue
                                     screen.fill((0,0,255))
                                     # draw text to screen
                                     screen.blit(text1, (20, 20) )
                                     # update the display
                                     pygame.display.flip()
+                                    # 10 second delay
                                     time.sleep(10)
+                                    # close the screen
                                     sys.quit()
+                            # sets win condition
                             if y >= 685:
-                                # Create a font object
+                                # create new font size
                                 font = pygame.font.SysFont("Arial", 50)
-                                # Create text using the font
+                                # create text using the font
                                 text1 = font.render("Your skills succeeded this time. :)", True, (black))
-                                # Create a display. Size must be a tuple, which is why it's in parentheses
+                                # create a display
                                 screen = pygame.display.set_mode( (800, 200) )
-                                # fill the screen with white
+                                # fill the screen with lime
                                 screen.fill((lime))
                                 # draw text to screen
                                 screen.blit(text1, (20, 20) )
                                 # update the display
                                 pygame.display.flip()
+                                # 10 second delay
                                 time.sleep(10)
+                                # close the game
                                 sys.quit()
                             pygame.display.update()
                     if pressed[pygame.K_2]:
-                        # Create a display. Size must be a tuple, which is why it's in parentheses
+                        # create a display
                         screen = pygame.display.set_mode( (1200, 700) )
-
-                        # colors
+                        # creates a list of colors that can be used later easily if necessary
                         black = pygame.Color(0,0,0)
                         white = pygame.Color(255,255,255)
                         red = pygame.Color(255,0,0)
@@ -403,13 +382,10 @@ while True:
                         yellow = pygame.Color(255,255,0)
                         green = pygame.Color(0,128,0)
                         navy = pygame.Color(0,0,128)
-
-                        # groundBlocks = [pygame.draw.rect(screen, green, (0, 10, 10, 690))]
-
-                        # original player position
+                        # yellow block starting position
                         x = 15
                         y = 674
-                        # Main loop. Your game would go inside this loop
+                        # game loop
                         while True:
                             # do something for each event in the event queue (list of things that happen)
                             for event in pygame.event.get():
@@ -417,7 +393,9 @@ while True:
                                 if event.type == pygame.QUIT:
                                     # If so, exit the program
                                     sys.exit()
+                            # creates a variable for the sprite as a yellow rectangle
                             sprite = pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+                            # creates speed for which the yellow block will move with each arrow key press
                             pressed = pygame.key.get_pressed()
                             if pressed[pygame.K_UP] and y > 0:
                                 y -= .3
@@ -427,12 +405,9 @@ while True:
                                 x -= .3
                             if pressed[pygame.K_RIGHT] and x < 1185:
                                 x += .3
-                                #makes the display screen white
+                            # makes the maze background navy
                             screen.fill(navy)
-                            # for block in groundBlocks:
-                            #     if(pygame.sprite.collide_rect(player, block)):
-                            #         sys.exit()
-                                #draws the rectangle which the player can move
+                            # creates a list of rectangles that can be used to make collision borders
                             rectangle_list = [
                                 pygame.Rect(0, 10, 10, 690),
                                 pygame.Rect(0, 690, 1165, 10),
@@ -521,6 +496,7 @@ while True:
                                 pygame.Rect(540, 425, 10, 215),
                                 pygame.Rect(520, 425, 10, 215),
                                 pygame.Rect(500, 425, 10, 215)]
+                            # draws all of the necessary rectangles on the maze
                             pygame.draw.rect(screen, green, (0, 10, 10, 690))
                             pygame.draw.rect(screen, green, (0, 690, 1165, 10))
                             pygame.draw.rect(screen, green, (1190, 0, 10, 700))
@@ -609,47 +585,49 @@ while True:
                             pygame.draw.rect(screen, green, (520, 425, 10, 215))
                             pygame.draw.rect(screen, green, (500, 425, 10, 215))
                             pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+                            # for statement to detect collisions
                             for rect in rectangle_list:
                                 pygame.draw.rect(screen, green, rect, -1)
                                 if sprite.colliderect(rect):
-                                    # Create a font object
+                                    # create new font size
                                     font = pygame.font.SysFont("Arial", 50)
-                                    # Create text using the font
+                                    # create text using the font - LOSE MESSAGE
                                     text1 = font.render("Your skills ran into a problem. :(", True, (255,255,255))
-
-
-                                    # Create a display. Size must be a tuple, which is why it's in parentheses
+                                    # create a display
                                     screen = pygame.display.set_mode( (800, 200) )
-
-                                    # fill the screen with white
+                                    # fill the screen with blue
                                     screen.fill((0,0,255))
                                     # draw text to screen
                                     screen.blit(text1, (20, 20) )
                                     # update the display
                                     pygame.display.flip()
+                                    # 10 second delay
                                     time.sleep(10)
+                                    # close the screen
                                     sys.quit()
+                            # sets win condition
                             if y >= 685:
-                                # Create a font object
+                                # create new font size
                                 font = pygame.font.SysFont("Arial", 50)
-                                # Create text using the font
+                                # create text using the font
                                 text1 = font.render("Your skills succeeded this time. :)", True, (black))
-                                # Create a display. Size must be a tuple, which is why it's in parentheses
+                                # create a display
                                 screen = pygame.display.set_mode( (800, 200) )
-                                # fill the screen with white
+                                # fill the screen with lime
                                 screen.fill((lime))
                                 # draw text to screen
                                 screen.blit(text1, (20, 20) )
                                 # update the display
                                 pygame.display.flip()
+                                # 10 second delay
                                 time.sleep(10)
+                                # close the game
                                 sys.quit()
                             pygame.display.update()
                     if pressed[pygame.K_3]:
-                        # Create a display. Size must be a tuple, which is why it's in parentheses
+                        # create a display
                         screen = pygame.display.set_mode( (1200, 700) )
-
-                        # colors
+                        # creates a list of colors that can be used later easily if necessary
                         black = pygame.Color(0,0,0)
                         white = pygame.Color(255,255,255)
                         red = pygame.Color(255,0,0)
@@ -658,13 +636,10 @@ while True:
                         yellow = pygame.Color(255,255,0)
                         green = pygame.Color(0,128,0)
                         navy = pygame.Color(0,0,128)
-
-                        # groundBlocks = [pygame.draw.rect(screen, green, (0, 10, 10, 690))]
-
-                        # original player position
+                        # yellow block starting position
                         x = 15
                         y = 674
-                        # Main loop. Your game would go inside this loop
+                        # game loop
                         while True:
                             # do something for each event in the event queue (list of things that happen)
                             for event in pygame.event.get():
@@ -672,7 +647,9 @@ while True:
                                 if event.type == pygame.QUIT:
                                     # If so, exit the program
                                     sys.exit()
+                            # creates a variable for the sprite as a yellow rectangle
                             sprite = pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+                            # creates speed for which the yellow block will move with each arrow key press
                             pressed = pygame.key.get_pressed()
                             if pressed[pygame.K_UP] and y > 0:
                                 y -= .5
@@ -682,12 +659,9 @@ while True:
                                 x -= .5
                             if pressed[pygame.K_RIGHT] and x < 1185:
                                 x += .5
-                                #makes the display screen white
+                            # makes the maze background navy
                             screen.fill(navy)
-                            # for block in groundBlocks:
-                            #     if(pygame.sprite.collide_rect(player, block)):
-                            #         sys.exit()
-                                #draws the rectangle which the player can move
+                            # creates a list of rectangles that can be used to make collision borders
                             rectangle_list = [
                                 pygame.Rect(0, 10, 10, 690),
                                 pygame.Rect(0, 690, 1165, 10),
@@ -776,6 +750,7 @@ while True:
                                 pygame.Rect(540, 425, 10, 215),
                                 pygame.Rect(520, 425, 10, 215),
                                 pygame.Rect(500, 425, 10, 215)]
+                            # draws all of the necessary rectangles on the maze
                             pygame.draw.rect(screen, green, (0, 10, 10, 690))
                             pygame.draw.rect(screen, green, (0, 690, 1165, 10))
                             pygame.draw.rect(screen, green, (1190, 0, 10, 700))
@@ -864,39 +839,42 @@ while True:
                             pygame.draw.rect(screen, green, (520, 425, 10, 215))
                             pygame.draw.rect(screen, green, (500, 425, 10, 215))
                             pygame.draw.rect(screen, yellow, pygame.Rect(x, y, 15, 15))
+                            # for statement to detect collisions
                             for rect in rectangle_list:
                                 pygame.draw.rect(screen, green, rect, -1)
                                 if sprite.colliderect(rect):
-                                    # Create a font object
+                                    # create new font size
                                     font = pygame.font.SysFont("Arial", 50)
-                                    # Create text using the font
+                                    # create text using the font - LOSE MESSAGE
                                     text1 = font.render("Your skills ran into a problem. :(", True, (255,255,255))
-
-
-                                    # Create a display. Size must be a tuple, which is why it's in parentheses
+                                    # create a display
                                     screen = pygame.display.set_mode( (800, 200) )
-
-                                    # fill the screen with white
+                                    # fill the screen with blue
                                     screen.fill((0,0,255))
                                     # draw text to screen
                                     screen.blit(text1, (20, 20) )
                                     # update the display
                                     pygame.display.flip()
+                                    # 10 second delay
                                     time.sleep(10)
+                                    # close the game
                                     sys.quit()
+                            # sets win condition
                             if y >= 685:
-                                # Create a font object
+                                # create new font size
                                 font = pygame.font.SysFont("Arial", 50)
-                                # Create text using the font
+                                # create text using the font
                                 text1 = font.render("Your skills succeeded this time. :)", True, (black))
-                                # Create a display. Size must be a tuple, which is why it's in parentheses
+                                # create a display
                                 screen = pygame.display.set_mode( (800, 200) )
-                                # fill the screen with white
+                                # fill the screen with lime
                                 screen.fill((lime))
                                 # draw text to screen
                                 screen.blit(text1, (20, 20) )
                                 # update the display
                                 pygame.display.flip()
+                                # 10 second delay
                                 time.sleep(10)
+                                # close the game
                                 sys.quit()
                             pygame.display.update()
